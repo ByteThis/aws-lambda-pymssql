@@ -1,0 +1,6 @@
+cd lambda/lib/python3.6/site-packages
+zip -r ../../../../lambda_deploy.zip *
+cd ../../../lib64/python3.6/site-packages
+zip -r ../../../../lambda_deploy.zip *
+exit
+zip lambda_deploy.zip lambda_function.py

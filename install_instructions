@@ -1,0 +1,7 @@
+docker run -v "$PWD":/var/task -it lambci/lambda:build-python3.6 bash
+
+virtualenv lambda
+. ./lambda/bin/activate
+yum install -y freetds-devel
+pip install -r requirements.txt
+cp /usr/lib64/libsybdb.so lambda/lib/python3.6/site-packages/

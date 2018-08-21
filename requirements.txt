@@ -1,0 +1,4 @@
+boto
+botocore
+Cython
+pymssql
