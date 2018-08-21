@@ -2,14 +2,14 @@
 
 AWS Lambda pymssql proof of concept with RDS MSSQL access based in `lambci/lambda:build-python3.6` docker image for easy testing and deployment.
 
-##Before you start
+## Before you start
 Manually edit the credentials in the `lambda_function.py` file.
 This is a PoC only, it is recommended to **set these in your environment** and not hardcode them in the file.
 
 Create a table called `test` with ID and Name fields and insert some dummy data or adapt the query `cursor.execute('SELECT * FROM test')` to fit your needs.
 
 
-##Setup
+## Setup
 After installing docker, download the python3.6 lambda build using:
 `docker pull lambci/lambda:build-python3.6`
 
@@ -37,7 +37,7 @@ cp /usr/lib64/libsybdb.so aws/lib/python3.6/site-packages/
 `python lambda_function.py`
 
 
-##Deployment
+## Deployment
 
 When you're ready to deploy your code to Lambda, use the following to create a zip with all the needed libraries from your environment with:
 
@@ -55,5 +55,5 @@ zip lambda_deploy.zip lambda_function.py
 ```
 
 
-##Adding more packages
+## Adding more packages
 Simply add the package names to `requirements.txt` and import them in the `lambda_function.py`. You should be good to go
